@@ -1,4 +1,6 @@
 from flask import Flask,request, render_template
+from flask import jsonify
+
 
 app = Flask(__name__)
 
@@ -10,7 +12,7 @@ def index():
 		'id': 1,
 		'name': "Vishal"
 	}
-	return json.dumps(ob)
+	return jsonify(ob)
 	
 if __name__ == "__main__":
   app.run(threaded=False)
